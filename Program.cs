@@ -60,7 +60,7 @@ class FileMaker
         List<Club> myClub = new List<Club>();
         string[] fileName = new string[2];
         string[] seperator = {", "};
-        string path = "C:\\codeine\\C# projects\\VuetifyIconGenerator\\assetsinput.txt";
+        string path = "C:\\codeine\\C# projects\\VuetifyIconGenerator\\assets\\input.txt";
        
 
         if (File.Exists(path))
@@ -85,9 +85,9 @@ class FileMaker
 
         foreach (Club c in myClub)
         {
-            logoPath = "C:\\codeine\\C# projects\\VuetifyIconGenerator\\assets" + c.ClubCode + ".svg";
+            logoPath = "C:\\codeine\\C# projects\\VuetifyIconGenerator\\assets\\" + c.ClubCode + ".svg";
             string readContent;
-            vuePath = savePath + c.ClubCode + ".vue";
+            vuePath = savePath + "\\" + c.ClubCode + ".vue";
 
             if (File.Exists(logoPath))
             {
@@ -99,7 +99,7 @@ class FileMaker
                         Console.WriteLine(readContent);
                         using (StreamWriter sW = new StreamWriter(vuePath))
                         {
-                            sW.WriteLine("<template>" + readContent + "<\\template>");
+                            sW.WriteLine("<template>\n" + readContent + "\n</template>");
                         }
                     }
                 }
