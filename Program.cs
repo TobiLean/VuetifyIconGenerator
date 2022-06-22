@@ -85,7 +85,7 @@ class FileMaker
 
         foreach (Club c in myClub)
         {
-            logoPath = "C:\\codeine\\C# projects\\VuetifyIconGenerator\\assets" + c.ClubCode + ".txt";
+            logoPath = "C:\\codeine\\C# projects\\VuetifyIconGenerator\\assets" + c.ClubCode + ".svg";
             string readContent;
             vuePath = savePath + c.ClubCode + ".vue";
 
